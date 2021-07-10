@@ -7,6 +7,7 @@ Feature: Google search functionality
     Given User is on Google home page
     Then User should see title Is Google
 
+   @wip
   Scenario: User  search title verification
     Given  User is on Google home page
     When User search for apple
