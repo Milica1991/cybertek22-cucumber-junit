@@ -4,7 +4,6 @@ Feature: Etsy search feature
     Given user is on the Etsy landing page
     Then user should see Etsy title as expected
 
-  @wip
     Scenario: Etsy Search Functionality Title Verificatiom
       Given user is on the Etsy landing page
       When user types Wooden spoon in the search bar

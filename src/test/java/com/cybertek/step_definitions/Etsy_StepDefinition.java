@@ -35,7 +35,7 @@ public class Etsy_StepDefinition {
     }
     @When("user clicks to search button")
     public void user_clicks_to_search_button() {
-       etsySearchPage.searchBar.click();
+       etsySearchPage.searchButton.click();
     }
     @Then("user sees title is Wooden spoon | Etsy")
     public void user_sees_title_is_wooden_spoon_etsy() {
