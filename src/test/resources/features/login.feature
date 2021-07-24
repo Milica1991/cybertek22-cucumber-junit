@@ -9,19 +9,19 @@ Feature: Library app login feature
   Background: Assuming user is on the login page
     Given user is on login page
 
-@librarian
+@librarian @employee
   Scenario: login as librarian
     When use enter librarian username
     And user enters librarian password
     Then user should see the dashboard
 
-  @student
+  @student @db
     Scenario: login as student
     When user enters student username
     And user enters student password
     Then user should see the dashboard
 
-@admin
+@admin @employee
   Scenario: login as admin
     When user enters admin username
     And user enters admin password
