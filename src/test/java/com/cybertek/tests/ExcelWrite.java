@@ -44,7 +44,14 @@ public class ExcelWrite {
 
         //This method will override existing cell
         adamsCell.setCellValue("Madam");
-
+        System.out.println("After:" + adamsCell);
+        //TODO: CHANGE STEVEN'S NAME TO TOM
+        for (int rowNum = 0; rowNum < sheet.getLastRowNum(); rowNum++) {
+            if (sheet.getRow(1).getCell(0).toString().equals("Steven")) {
+                sheet.getRow(1).getCell(0).setCellValue("Tom");
+            }
+        }
+//=====================================================================
         //use fileOutputStream to push change
         FileOutputStream fileOutputStream = new FileOutputStream(path);
 
