@@ -7,6 +7,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ExcelWrite {
@@ -35,6 +36,24 @@ public class ExcelWrite {
 
         //kings cell
         cell = row.getCell(1);
+
+        //create and store adamsCell
+        XSSFCell adamsCell = sheet.getRow(2).getCell(0);
+
+        System.out.println("Before: " + adamsCell);
+
+        //This method will override existing cell
+        adamsCell.setCellValue("Madam");
+
+        //use fileOutputStream to push change
+        FileOutputStream fileOutputStream = new FileOutputStream(path);
+
+        //write to file using fileOutputStream
+        workbook.write(fileOutputStream);
+
+        fileInputStream.close();
+        fileOutputStream.close();
+        workbook.close();
 
 
     }
